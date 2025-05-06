@@ -589,10 +589,10 @@ client.connect(err => {
             total_amount: amount,
             currency: 'BDT',
             tran_id: `${trx_id}`,
-            success_url: `http://localhost:5000/success/${trx_id}`,
-            fail_url: `http://localhost:5000/fail/${trx_id}`,
-            cancel_url: `http://localhost:5000/cancel/${trx_id}`,
-            ipn_url: 'http://localhost:5000/ipn',
+            success_url: `https://sheba-xyz-backend.onrender.com/success/${trx_id}`,
+            fail_url: `https://sheba-xyz-backend.onrender.com/fail/${trx_id}`,
+            cancel_url: `https://sheba-xyz-backend.onrender.com/cancel/${trx_id}`,
+            ipn_url: 'https://sheba-xyz-backend.onrender.com/ipn',
             shipping_method: 'Courier',
             product_name: 'Computer.',
             product_category: 'Electronic',
@@ -637,8 +637,8 @@ client.connect(err => {
                 $set: paymentDetails
             },
             (err, result) => {
-                err && res.redirect('http://localhost:5000/fail')
-                result && res.redirect(`http://localhost:3000/dashboard`)
+                err && res.redirect('https://sheba-xyz-backend.onrender.com/fail')
+                result && res.redirect(`https://sheba-web.netlify.app/dashboard`)
             })
     })
 
@@ -652,8 +652,8 @@ client.connect(err => {
                 $set: paymentDetails
             },
             (err, result) => {
-                err && res.redirect('http://localhost:5000/fail')
-                result && res.redirect('http://localhost:3000/dashboard')
+                err && res.redirect('https://sheba-xyz-backend.onrender.com/fail')
+                result && res.redirect('https://sheba-web.netlify.app/dashboard')
             }
         )
     })
@@ -668,8 +668,8 @@ client.connect(err => {
                 $set: paymentDetails
             },
             (err, result) => {
-                err && res.redirect('http://localhost:5000/fail')
-                result && res.redirect('http://localhost:3000/dashboard')
+                err && res.redirect('https://sheba-xyz-backend.onrender.com/fail')
+                result && res.redirect('https://sheba-web.netlify.app/dashboard')
             })
     })
 
